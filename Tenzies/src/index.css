@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply m-0 p-5 min-h-screen bg-black flex items-center justify-center font-[Inter,sans-serif];
+}
+
+.sr-only {
+  @apply absolute w-px h-px p-0 -m-px overflow-hidden whitespace-nowrap border-0;
+  clip: rect(0, 0, 0, 0); /* <-- Use plain CSS here */
+  clip-path: inset(50%); /* Optional modern fallback */
+}

@@ -1,0 +1,57 @@
+<<<<<<< HEAD
+1. form ko use karte time agar tum onSubmit attribute ko use karke agar form data submit karte ho react me tho tumhe event recevie hota hai aur tumhe bhaut si chize karni hoti hai but agar action={some function} karte hai to usme direct hi formData recieve hota hai tho baki ka overhead mit jata hai aur jo kaam hame event.preventDefault() karna pad rha tha aur fir naya ek form element banao fir data hota hai vo nhi karna padega
+
+2. onSubmit ka example
+
+function handleSubmit(event) {
+    event.preventDefault();
+    const formData = new FormData(event.currentTarget)
+    const newIgredient = formData.get("ingredient");
+        
+    if(newIgredient.trim()) {
+        setIngredient((prevIngredient) => [...prevIngredient, newIgredient.trim()]);
+        event.target.reset();
+    }
+}
+
+3. action ka example
+
+    function collectIngredient(formData){
+        const newIngredient = formData.get("ingredient")
+        setIngredient((prevIngredient) => ([...prevIngredient, newIngredient.trim()]))
+    }
+
+
+Refs are similar to state, except:
+1. You can mutate them directly
+2. Changing them doesn't cause a re-render.
+They're commonly used for accessing DOM nodes without needing to assign ids to elements.
+=======
+1. form ko use karte time agar tum onSubmit attribute ko use karke agar form data submit karte ho react me tho tumhe event recevie hota hai aur tumhe bhaut si chize karni hoti hai but agar action={some function} karte hai to usme direct hi formData recieve hota hai tho baki ka overhead mit jata hai aur jo kaam hame event.preventDefault() karna pad rha tha aur fir naya ek form element banao fir data hota hai vo nhi karna padega
+
+2. onSubmit ka example
+
+function handleSubmit(event) {
+    event.preventDefault();
+    const formData = new FormData(event.currentTarget)
+    const newIgredient = formData.get("ingredient");
+        
+    if(newIgredient.trim()) {
+        setIngredient((prevIngredient) => [...prevIngredient, newIgredient.trim()]);
+        event.target.reset();
+    }
+}
+
+3. action ka example
+
+    function collectIngredient(formData){
+        const newIngredient = formData.get("ingredient")
+        setIngredient((prevIngredient) => ([...prevIngredient, newIngredient.trim()]))
+    }
+
+
+Refs are similar to state, except:
+1. You can mutate them directly
+2. Changing them doesn't cause a re-render.
+They're commonly used for accessing DOM nodes without needing to assign ids to elements.
+>>>>>>> 557474b (Chef Claude App)
